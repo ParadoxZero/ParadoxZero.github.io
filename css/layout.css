@@ -326,12 +326,12 @@ ul#nav li.current a { color: #F06000; }
 }
 
 .python {
-  	width: 70%;
+  	width: 100%;
   	-moz-animation: photoshop 2s ease;
   	-webkit-animation: photoshop 2s ease;
 }
 .android {
-  	width: 75%;
+  	width: 80%;
   	-moz-animation: illustrator 2s ease;
   	-webkit-animation: illustrator 2s ease;
 }
@@ -341,69 +341,65 @@ ul#nav li.current a { color: #F06000; }
   	-webkit-animation: wordpress 2s ease;
 }
 .csharp {
-  	width: 60%;
+  	width: 85%;
   	-moz-animation: css 2s ease;
   	-webkit-animation: css 2s ease;
 }
 .java {
-  	width: 70%;
+  	width: 90%;
   	-moz-animation: html5 2s ease;
   	-webkit-animation: html5 2s ease;
 }
-.jquery {
-  	width: 50%;
-  	-moz-animation: jquery 2s ease;
-  	-webkit-animation: jquery 2s ease;
-}
 
-@-moz-keyframes photoshop {
+
+@-moz-keyframes python {
   0%   { width: 0px;  }
-  100% { width: 60%;  }
+  100% { width: 100%;  }
 }
 @-moz-keyframes illustrator {
   0%   { width: 0px;  }
-  100% { width: 55%;  }
+  100% { width: 80%;  }
 }
 @-moz-keyframes wordpress {
   0%   { width: 0px;  }
-  100% { width: 50%;  }
+  100% { width: 90%;  }
 }
 @-moz-keyframes css {
   0%   { width: 0px;  }
-  100% { width: 90%;  }
+  100% { width: 85%;  }
 }
 @-moz-keyframes html5 {
   0%   { width: 0px;  }
-  100% { width: 80%;  }
+  100% { width: 90%;  }
 }
 @-moz-keyframes jquery {
   0%   { width: 0px;  }
-  100% { width: 50%;  }
+  100% { width: 90%;  }
 }
 
 @-webkit-keyframes photoshop {
   0%   { width: 0px;  }
-  100% { width: 60%;  }
+  100% { width: 100%;  }
 }
 @-webkit-keyframes illustrator {
   0%   { width: 0px;  }
-  100% { width: 55%;  }
+  100% { width: 80%;  }
 }
 @-webkit-keyframes wordpress {
   0%   { width: 0px;  }
-  100% { width: 50%;  }
+  100% { width: 90%;  }
 }
 @-webkit-keyframes css {
   0%   { width: 0px;  }
-  100% { width: 90%;  }
+  100% { width: 85%;  }
 }
 @-webkit-keyframes html5 {
   0%   { width: 0px;  }
-  100% { width: 80%;  }
+  100% { width: 90%;  }
 }
 @-webkit-keyframes jquery {
   0%   { width: 0px;  }
-  100% { width: 50%;  }
+  100% { width: 90%;  }
 }
 
 /* ------------------------------------------------------------------ */
@@ -411,17 +407,21 @@ ul#nav li.current a { color: #F06000; }
 /* ------------------------------------------------------------------ */
 
 #portfolio {
-   background: #ebeeee;
+   background: #111B1B;
    padding-top: 90px;
    padding-bottom: 60px;
 }
 #portfolio h1 {
-   font: 15px/24px 'opensans-semibold', sans-serif;
-   text-transform: uppercase;
+   font-family: 'opensans-bold', sans-serif;
+   text-transform:capitalize;
    letter-spacing: 1px;
    text-align: center;
-   margin-bottom: 48px;
+   margin-bottom: 30px;
    color: #95A3A3;
+}
+
+#portfolio h5 {
+  color: #ECDFDF
 }
 
 /* Portfolio Content */
