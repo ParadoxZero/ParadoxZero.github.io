@@ -1,21 +1,27 @@
 #nav {
   border-style: none;
   position: fixed;
-  bottom: 50px;
+  bottom: 100px;
   right:50px;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
+  width: 200px;
 
   #nav-options {
-    border-style: solid;
-    border-color: #eeeeee;
-    border-radius: 20%;
+    margin: 20px;
     padding: 15px;
     margin: 10px;
-    ul {
-      li {
 
+    ul {
+      list-style-type:none;
+      padding: 20px;
+      li {
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
       }
     }
   }
