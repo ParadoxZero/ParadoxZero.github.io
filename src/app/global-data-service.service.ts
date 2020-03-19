@@ -8,5 +8,14 @@ import { MenuItem } from 'src/models/MenuItems';
 export class GlobalDataServiceService {
 
   public menuList: BehaviorSubject<MenuItem[]> = new BehaviorSubject<MenuItem[]>([]);
-  constructor() { }
+  constructor() {
+
+    this.menuList.next([
+      {Name:"Item 1", Action:"#"},
+      {Name:"Item 2", Action:"#"},
+      {Name:"Item 3", Action:"#"},
+      {Name:"Item 4", Action:"#"},
+    ]);
+
+  }
 }

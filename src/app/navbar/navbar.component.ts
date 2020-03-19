@@ -16,12 +16,7 @@ export class NavbarComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.dataService.menuList.next([
-      {Name:"Item 1", Action:"#"},
-      {Name:"Item 2", Action:"#"},
-      {Name:"Item 3", Action:"#"},
-      {Name:"Item 4", Action:"#"},
-    ])
+
     this.isNavBarOpen.subscribe((value) => {
       this.updateIcon(value);
     })
