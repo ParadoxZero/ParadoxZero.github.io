@@ -8,7 +8,7 @@ import { BehaviorSubject } from 'rxjs';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  public isNavBarOpen: BehaviorSubject<boolean>;
+  public isNavBarOpen: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
   public currentIcon: IconDefinition = faThLarge;
   constructor(
   ) {}
@@ -19,8 +19,8 @@ export class NavbarComponent implements OnInit {
     })
   }
 
-  public openNavbar(): void {
-
+  public toggleNavbar(): void {
+    this.isNavBarOpen.next(!this.isNavBarOpen.value);
   }
 
   private updateIcon(isOpen: boolean): void {

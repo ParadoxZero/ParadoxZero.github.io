@@ -1,3 +1,15 @@
-<button type="button" class="btn btn-lg btn-outline-dark nav-button">
-  <fa-icon [icon]="currentIcon"></fa-icon>
-</button>
+<div id="nav">
+  <div id="nav-options" *ngIf="isNavBarOpen.getValue()">
+    <ul>
+      <li><a href="#">First Item</a></li>
+      <li><a href="#">Second Item</a></li>
+      <li><a href="#">Third Item</a></li>
+      <li><a href="#">Fourth</a></li>
+    </ul>
+  </div>
+  <div id="nav-button-container">
+    <button type="button" class="btn btn-lg btn-outline-dark nav-button" (click)="toggleNavbar()">
+      <fa-icon [icon]="currentIcon"></fa-icon>
+    </button>
+  </div>
+</div>

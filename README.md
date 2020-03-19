@@ -6,5 +6,5 @@
 * Configure NPM
     ```
         $ npm install
-        $ npm Starte
+        $ npm Start
     ```
