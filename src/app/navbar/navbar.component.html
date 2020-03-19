@@ -1,10 +1,11 @@
 <div id="nav">
   <div id="nav-options" *ngIf="isNavBarOpen.getValue()">
     <ul>
-      <li><a href="#">First Item</a></li>
-      <li><a href="#">Second Item</a></li>
-      <li><a href="#">Third Item</a></li>
-      <li><a href="#">Fourth</a></li>
+      <li *ngFor="let item of dataService.menuList.getValue()">
+        <div>
+          <a href="{{item.Action}}">{{item.Name}}</a>
+        </div>
+      </li>
     </ul>
   </div>
   <div id="nav-button-container">
