@@ -1,0 +1,52 @@
+{
+    "name": "Sidhin S Thomas",
+    "profile": "C++ developer, system software enthusiast. In search of novel problems to solve.",
+    "picUrl": "./profile-pic-small.jpg",
+    "sections":[
+        {
+            "header": "Overview",
+            "Content": [
+                "Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
+                " blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
+                " blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
+                " blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah"
+            ],
+            "iconKey": "UserOutlined"
+        },
+        {
+            "header": "Experience",
+            "iconKey": "BankOutlined",
+            "content": [
+                {
+                    "title": "Microsoft Edge - PDF",
+                    "points": [
+                        "Took up ownership of Digital SIgnature",
+                        "Unblocked unseasoned pdf viewer post deptication of pepper APIs in Chromium"
+                    ]
+                },
+                {
+                    "title": "Microsoft Windows Team Edition",
+                    "points": [
+                        "Owned End Session Cleanup - Component which enables Surface Hub users to walk away with confidence knowning their content/ logins are cleaned up post session",
+                        "Shiped software control to manage brightness of Surface Hub",
+                        "Shipped MMR/TAC integration for Surface Hub which allows admins to monitor and manage Surface Hubs remotely"
+                    ]
+                }
+            ]
+        },
+        {
+            "header": "Education",
+            "iconKey": "BookOutlined"
+        },
+        {
+            "header": "Projects",
+            "iconKey": "BulbOutlined"
+        }
+    ],
+    "socialUrls": {
+        "twitter": "SidhinThomas",
+        "github": "ParadoxZero",
+        "instagram": "the_paradox_zero",
+        "linkedIn": "sidhin"
+    }
+}
