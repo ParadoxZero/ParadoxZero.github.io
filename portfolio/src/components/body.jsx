@@ -1,5 +1,5 @@
 import { Menu } from 'antd';
-import {UserOutlined, ScheduleOutlined, BankOutlined, BookOutlined, BulbOutlined} from '@ant-design/icons'
+import {UserOutlined, ScheduleOutlined, BankOutlined, BookOutlined, BulbOutlined, CodeOutlined} from '@ant-design/icons'
 import React from 'react';
 
 export class Body extends React.Component
@@ -18,12 +18,17 @@ export class Body extends React.Component
         this.setState({ current: e.key });
     };
 
+    IconfontStyle = {
+        fontSize: '16px'
+    }
+
     mapKeyToIcon = {
-        'UserOutlined': <UserOutlined/>,
-        'ScheduleOutlined': <ScheduleOutlined />,
-        'BankOutlined': <BankOutlined />,
-        'BookOutlined':<BookOutlined />,
-        'BulbOutlined':<BulbOutlined />
+        'UserOutlined': <UserOutlined style={this.IconfontStyle}/>,
+        'ScheduleOutlined': <ScheduleOutlined style={this.IconfontStyle}/>,
+        'BankOutlined': <BankOutlined style={this.IconfontStyle}/>,
+        'BookOutlined':<BookOutlined style={this.IconfontStyle}/>,
+        'BulbOutlined':<BulbOutlined style={this.IconfontStyle}/>,
+        'CodeOutlined': <CodeOutlined style={this.IconfontStyle}/>
     };
 
     render()
