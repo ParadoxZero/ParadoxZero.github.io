@@ -1,1 +1,6 @@
 @import '~antd/dist/antd.css';
+
+body {
+    background-image: url("/bp-pattern2.jpg");
+    background-repeat: repeat;
+}
