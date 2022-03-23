@@ -11,6 +11,7 @@ function App ()
 {
   return (
     <>
+        <div id='sticky-bg'></div>
         <Header profile={profile} name={name} picUrl={picUrl} socialUrls={socialUrls}/>
         <Body sections={sections}/>
         <h6>Designed by Sidhin S Thomas copyright 2022</h6>

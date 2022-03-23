@@ -1,6 +1,11 @@
 @import '~antd/dist/antd.css';
 
-body {
+#sticky-bg {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top:0;
     background-image: url("/bp-pattern2.jpg");
     background-repeat: repeat;
+    z-index: -999;
 }
