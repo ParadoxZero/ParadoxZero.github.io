@@ -1,5 +1,10 @@
 @import '~antd/dist/antd.css';
 
+#root {
+    height: 100%;
+    width: 100%;
+}
+
 #sticky-bg {
     height: 100vh;
     width: 100%;
@@ -8,4 +13,9 @@
     background-image: url("/bp-pattern2.jpg");
     background-repeat: repeat;
     z-index: -999;
+}
+
+.footer {
+    position: relative;
+    bottom: 0px;
 }

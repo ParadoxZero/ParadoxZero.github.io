@@ -1,4 +1,4 @@
-import { Menu, Card, Timeline, Descriptions } from 'antd';
+import { Menu, Card, Timeline, Tabs, PageHeader } from 'antd';
 import {UserOutlined, ScheduleOutlined, BankOutlined, BookOutlined, BulbOutlined, CodeOutlined} from '@ant-design/icons'
 import React from 'react';
 
@@ -12,6 +12,32 @@ export class Body extends React.Component
     {
         super(props);
         this.state.current = props.sections[0];
+    }
+
+    componentDidMount()
+    {
+        const myDiv = document.querySelector('#section-content')  
+        window.addEventListener('scroll', () => {  
+        if (window.offsetHeight  >= window.scrollHeight) {  
+            console.log('scrolled to bottom');
+            // const current_index = this.findIndex(this.state.current.header);
+            // const max = this.props.length;
+            // const next_index = (current_index+1) % max;
+            // this.setState({current:this.props.sections[next_index]})  
+        }  
+        })
+    }
+
+    findIndex = key => {
+        const max = this.props.sections.length;
+        const sections = this.props.sections;
+        for ( let i=0; i<max; ++i)
+        {
+            if(sections[i].header === key)
+            {
+                return i;
+            }
+        }
     }
 
     findSectinon = key => {
@@ -56,7 +82,7 @@ export class Body extends React.Component
                                 <h4>{experience.timeline}</h4>
                                     <ul>
                                         {experience.points.map((point, index)=>
-                                            <li>{point}</li>
+                                            <li key={index}>{point}</li>
                                         )}
                                     </ul>
                             </Card>
@@ -83,14 +109,17 @@ export class Body extends React.Component
     {
         const content = this.state.current.content;
         return (
-            <div style={{width: '60vw'}}>
+            <Tabs tabPosition='left' style={{width: '60vw'}}>
             {content.map((detail,index) =>
-                <Descriptions title={detail.title} bordered layout='vertical'>
-                    <Descriptions.Item label="School">{detail.school}</Descriptions.Item>
-                </Descriptions>
+                <Tabs.TabPane tab={detail.title} key={index}>
+                    <Card className='section-card section-card-details' bordered={false}>
+                        <h2>{detail.title}</h2>
+                        <h4>{detail.school}</h4>
+                    </Card>
+                </Tabs.TabPane>
             )}
 
-            </div>
+            </Tabs>
         )
     }
 
@@ -115,7 +144,7 @@ export class Body extends React.Component
                     <Menu.Item key={section.header} icon={this.mapKeyToIcon[section.iconKey]}>{section.header}</Menu.Item>
                 )}
             </Menu>
-            <div className='section-container'>
+            <div className='section-container' id='section-content'>
                 {this.renderContent()}
             </div>
             </>
