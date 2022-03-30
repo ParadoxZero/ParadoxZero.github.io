@@ -1,6 +1,8 @@
-import { Menu, Card, Timeline, Tabs, PageHeader } from 'antd';
+import { Menu, Card, Timeline, Tabs, Collapse } from 'antd';
 import {UserOutlined, ScheduleOutlined, BankOutlined, BookOutlined, BulbOutlined, CodeOutlined} from '@ant-design/icons'
 import React from 'react';
+import { Education } from './education';
+import {Overview} from './overview';
 
 export class Body extends React.Component
 {
@@ -40,7 +42,7 @@ export class Body extends React.Component
         }
     }
 
-    findSectinon = key => {
+    findSection = key => {
         for ( let section of this.props.sections)
         {
             if(section.header === key)
@@ -51,7 +53,7 @@ export class Body extends React.Component
     }
 
     handleClick = e => {
-        let section = this.findSectinon(e.key);
+        let section = this.findSection(e.key);
         this.setState({ current: section });
     };
 
@@ -93,43 +95,13 @@ export class Body extends React.Component
         )
     }
 
-    renderOverview()
-    {
-
-        return (
-            <Card className='section-card section-card-details' bordered={false}>
-                {this.state.current.Content.map( (content, index) => 
-                    <p>{content}</p>
-                )}
-            </Card>
-        )
-    }
-
-    renderEducation()
-    {
-        const content = this.state.current.content;
-        return (
-            <Tabs tabPosition='left' style={{width: '60vw'}}>
-            {content.map((detail,index) =>
-                <Tabs.TabPane tab={detail.title} key={index}>
-                    <Card className='section-card section-card-details' bordered={false}>
-                        <h2>{detail.title}</h2>
-                        <h4>{detail.school}</h4>
-                    </Card>
-                </Tabs.TabPane>
-            )}
-
-            </Tabs>
-        )
-    }
-
     renderContent()
     {
         switch(this.state.current.header)
         {
-            case 'Overview': return this.renderOverview();
+            case 'Overview': return <Overview paragraphs = {this.state.current.content} />
             case 'Experience': return this.renderExperience();
-            case 'Education': return this.renderEducation();
+            case 'Education': return <Education content = {this.state.current.content} />
             default: return (<p>No Idea, what?</p>)
         }
     }
