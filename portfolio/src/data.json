@@ -62,18 +62,15 @@
             "iconKey": "BookOutlined",
             "content" : [
                 {
-                    "title": "B. Tech Computer Science and Engineering",
+                    "header": "Bachelors Degree",
+                    "course": "B. Tech Computer Science and Engineering",
                     "school": "Rajiv Gandhi Institute of Technology, Kottayam",
-                    "notables": [
-                        ""
-                    ]
+                    "timeline": "2014 - 2018"
                 },
                 {
-                    "title": "High School",
-                    "school": "St. Gregorios School, Dwarka",
-                    "notables": [
-                        ""
-                    ]
+                    "header": "High School",
+                    "course": "Central Board of Secondary Education",
+                    "school": "St. Gregorios School, Dwarka"
                 }
             ]
         },

@@ -55,3 +55,7 @@
 .ant-timeline-item-tail {
     border-color:  #167ddd18;
 }
+
+.ant-collapse-header {
+    font-weight: bolder;
+}
