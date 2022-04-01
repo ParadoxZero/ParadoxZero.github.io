@@ -1,0 +1,61 @@
+.display-pic-container {
+    margin-left: 5vw;
+}
+
+.display-pic {
+    border-radius: 50%;
+}
+
+.header-row {
+    padding-top: 5vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+}
+
+.name-container {
+    display: flex;
+    flex-grow: 2;
+    flex-direction: column;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    max-width: 60vw;
+    flex-wrap: wrap;
+}
+
+.nav-bar-container {
+    justify-content: center;
+    font-size: 16px;
+    background-color: rgba(240, 248, 255, 0);
+}
+.section-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 2vh;
+}
+.section-card-details {
+    width: 60vw;
+}
+
+.section-card {
+    background-color: rgba(100, 100, 100, 0.096);
+    border-radius: 20px;
+    text-align: left;
+}
+
+.experience-card {
+    border-color:  #167ddd18;
+}
+
+.experience {
+    width: 60%;
+}
+.ant-timeline-item-tail {
+    border-color:  #167ddd18;
+}
+
+.ant-collapse-header {
+    font-weight: bolder;
+}

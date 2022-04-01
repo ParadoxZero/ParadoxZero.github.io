@@ -1,0 +1,88 @@
+{
+    "name": "Sidhin S Thomas",
+    "profile": "C++ developer, system software enthusiast. In search of novel problems to solve. Browser developer working on Windows Edge. Main tech stack is C++, , React, Python. Work with Python on automation and scripting. Have experience developing enterprise solutions using ASP dot net core and data stack like Azure Data Factory and Azure Data Bricks.",
+    "picUrl": "./profile-pic-small.JPG",
+    "sections":[
+        {
+            "header": "Overview",
+            "content": [
+                "Engineer by nature. I extract a great deal of joy from being able to build different things. programming is my passion.",
+                "I was in fifth grade when I first “hacked” Age of empires. That’s when I started seeing computers as more than a game console. In eight grade, from an example VB.NET program in my textbook (a program to add 2 numbers), I learned the basics of programming. I was too young and didn’t have internet for tutorial, but still with the Visual studio help, Created lot’s of prank apps. That’s around when I fell in love with programing. In 11th grade I took up Computer Science, and finished the coursework about C++ (including stuffs from 12th grade ) in 2–3 months, that’s how much I loved it.",
+                "For me programing is not just about developing a software, it’s about solving a problem or a challenge. It’s a hobby. First remarkable thing I wrote up was a gravity simulator using BGI graphics of TurboC++. You could throw balls here and there, it will always falls according to the projectile motion. That was around in middle of 11th grade. I loved it.",
+                "And now, after the years I have created small games, worked on Operating Systems, OS shell, Built OS APIs, worked on Chromium, worked on PDF engines.",
+                "Life is good and interesting."
+            ],
+            "iconKey": "UserOutlined"
+        },
+        {
+            "header": "Experience",
+            "iconKey": "CodeOutlined",
+            "content": [
+                {
+                    "title": "Software Engineer 2 | Microsoft Edge - PDF",
+                    "timeline": "Jan 2020 - Present",
+                    "points": [
+                        "Took up ownership of Digital SIgnature",
+                        "Unblocked unseasoned pdf viewer post deptication of pepper APIs in Chromium"
+                    ]
+                },
+                {
+                    "title": "Sofftware Engineer 2 | Microsoft Windows Team Edition",
+                    "timeline": "Nov 2019 to Jan 2020",
+                    "points": [
+                        "Owned End Session Cleanup - Component which enables Surface Hub users to walk away with confidence knowning their content/ logins are cleaned up post session",
+                        "Shiped software control to manage brightness of Surface Hub",
+                        "Shipped MMR/TAC integration for Surface Hub which allows admins to monitor and manage Surface Hubs remotely"
+                    ]
+                },
+                {
+                    "title": "Sofftware Engineer | Microsoft HR Data Insights",
+                    "timeline": "Jan 2019 - Nov 2019",
+                    "points": [
+                        "Owned and built up the HCM Access Management Framework",
+                        "Shipped vnext version of employee data source based on Data Lake, migrate from SQL servers",
+                        "Owned key transformations to the employee data lake via Data Bricks"
+                    ]
+                },
+                {
+                    "title": "Sofftware Engineer | Microsoft Digital Crimes Unit - FAME (tool)",
+                    "timeline": "Aug 2018 - Dec 2018",
+                    "points": [
+                        "Built search advanced search query caching to make searches easier on users",
+                        "Enhanced report generation by eliminating data size limit (previously limited to 1000 rows)",
+                        "Built an enhanced search grid, increasing the capacity of maximum 50 results to virtually unlimited by leveraging the concept of virtual scrolling.",
+                        "Built extremely scalabale downstream integration to pull core data out of Application to BI systems",
+                        "Built a search index operation framework enables developers to implement operations over search index with just two lines of code."
+                    ]
+                }
+            ]
+        },
+        {
+            "header": "Education",
+            "iconKey": "BookOutlined",
+            "content" : [
+                {
+                    "header": "Bachelors Degree",
+                    "course": "B. Tech Computer Science and Engineering",
+                    "school": "Rajiv Gandhi Institute of Technology, Kottayam",
+                    "timeline": "2014 - 2018"
+                },
+                {
+                    "header": "High School",
+                    "course": "Central Board of Secondary Education",
+                    "school": "St. Gregorios School, Dwarka"
+                }
+            ]
+        },
+        {
+            "header": "Projects",
+            "iconKey": "BulbOutlined"
+        }
+    ],
+    "socialUrls": {
+        "twitter": "SidhinThomas",
+        "github": "ParadoxZero",
+        "instagram": "the_paradox_zero",
+        "linkedIn": "sidhin"
+    }
+}
