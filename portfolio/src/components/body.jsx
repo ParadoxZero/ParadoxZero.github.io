@@ -1,8 +1,9 @@
-import { Menu, Card, Timeline, Tabs, Collapse } from 'antd';
+import { Menu, Card, Timeline } from 'antd';
 import {UserOutlined, ScheduleOutlined, BankOutlined, BookOutlined, BulbOutlined, CodeOutlined} from '@ant-design/icons'
 import React from 'react';
 import { Education } from './education';
 import {Overview} from './overview';
+import { ErrorNotFound } from './ErrorNotFound';
 
 export class Body extends React.Component
 {
@@ -14,20 +15,6 @@ export class Body extends React.Component
     {
         super(props);
         this.state.current = props.sections[0];
-    }
-
-    componentDidMount()
-    {
-        const myDiv = document.querySelector('#section-content')  
-        window.addEventListener('scroll', () => {  
-        if (window.offsetHeight  >= window.scrollHeight) {  
-            console.log('scrolled to bottom');
-            // const current_index = this.findIndex(this.state.current.header);
-            // const max = this.props.length;
-            // const next_index = (current_index+1) % max;
-            // this.setState({current:this.props.sections[next_index]})  
-        }  
-        })
     }
 
     findIndex = key => {
@@ -102,7 +89,7 @@ export class Body extends React.Component
             case 'Overview': return <Overview paragraphs = {this.state.current.content} />
             case 'Experience': return this.renderExperience();
             case 'Education': return <Education content = {this.state.current.content} />
-            default: return (<p>No Idea, what?</p>)
+            default: return <ErrorNotFound />
         }
     }
 

@@ -1,14 +1,10 @@
-import { Col, Row, Image } from "antd";
+import { Image } from "antd";
 import React from "react";
 
 import './components.css'
 
 export class Header extends React.Component 
 {
-    constructor(props)
-    {
-        super(props);
-    }
     render()
     {
         return(

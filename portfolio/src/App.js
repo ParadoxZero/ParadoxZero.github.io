@@ -3,7 +3,6 @@ import {Header} from './components/header'
 import {Body} from './components/body'
 
 import React from 'react';
-import {} from 'antd';
 
 import {profile, name, picUrl, socialUrls, sections} from './data.json';
 
