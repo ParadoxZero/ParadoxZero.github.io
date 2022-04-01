@@ -59,3 +59,8 @@
 .ant-collapse-header {
     font-weight: bolder;
 }
+
+.ant-space-item > a{
+    color: inherit;
+    font-size: 24px;
+}
