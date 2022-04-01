@@ -4,6 +4,7 @@ import React from 'react';
 import { Education } from './education';
 import {Overview} from './overview';
 import { ErrorNotFound } from './ErrorNotFound';
+import { Experience } from './experience';
 
 export class Body extends React.Component
 {
@@ -59,27 +60,7 @@ export class Body extends React.Component
 
     renderExperience()
     {
-        const section = this.state.current;
-        const experiences = section.content;
-        return (
-            <>
-                <Timeline mode="alternate" className='experience'>
-                    {experiences.map( (experience, index) =>
-                        <Timeline.Item>
-                            <Card bordered={true} hoverable={true} className='section-card experience-card'>
-                                <h2>{experience.title}</h2>
-                                <h4>{experience.timeline}</h4>
-                                    <ul>
-                                        {experience.points.map((point, index)=>
-                                            <li key={index}>{point}</li>
-                                        )}
-                                    </ul>
-                            </Card>
-                        </Timeline.Item>
-                    )}
-                </Timeline>
-            </>
-        )
+
     }
 
     renderContent()
@@ -87,7 +68,7 @@ export class Body extends React.Component
         switch(this.state.current.header)
         {
             case 'Overview': return <Overview paragraphs = {this.state.current.content} />
-            case 'Experience': return this.renderExperience();
+            case 'Experience': return <Experience experience= {this.state.current.content} />
             case 'Education': return <Education content = {this.state.current.content} />
             default: return <ErrorNotFound />
         }
