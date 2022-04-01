@@ -64,3 +64,14 @@
     color: inherit;
     font-size: 24px;
 }
+
+#footer {
+    bottom: 0;
+    position: relative;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-grow: 2;
+}
