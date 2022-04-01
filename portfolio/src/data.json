@@ -80,9 +80,8 @@
         }
     ],
     "socialUrls": {
-        "twitter": "SidhinThomas",
-        "github": "ParadoxZero",
-        "instagram": "the_paradox_zero",
-        "linkedIn": "sidhin"
+        "github": "https://github.com/ParadoxZero",
+        "instagram": "https://www.instagram.com/the_paradox_zero/",
+        "linkedIn": "https://www.linkedin.com/in/sidhin/"
     }
 }
