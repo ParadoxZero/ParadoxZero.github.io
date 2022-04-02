@@ -48,11 +48,6 @@ export class Body extends React.Component
         'CodeOutlined': <CodeOutlined style={this.IconfontStyle}/>
     };
 
-    renderExperience()
-    {
-
-    }
-
     renderContent()
     {
         switch(this.state.current.header)
