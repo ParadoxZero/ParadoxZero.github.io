@@ -2,6 +2,10 @@
     margin-left: 5vw;
 }
 
+.contact-container {
+    margin-right: 5vw;
+}
+
 .display-pic {
     border-radius: 50%;
 }
@@ -29,11 +33,16 @@
     font-size: 16px;
     background-color: rgba(240, 248, 255, 0);
 }
+
+.ant-menu-horizontal {
+    border-bottom: 0;
+}
+
 .section-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-top: 2vh;
+    padding-top: 20px;
 }
 .section-card-details {
     width: 60vw;
