@@ -76,7 +76,14 @@
         },
         {
             "header": "Projects",
-            "iconKey": "BulbOutlined"
+            "iconKey": "BulbOutlined",
+            "content": [
+                {
+                    "title": "",
+                    "description":"",
+                    "link": ""
+                }
+            ]
         }
     ],
     "socialUrls": {
