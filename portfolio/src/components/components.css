@@ -126,7 +126,7 @@
 
     .header-row {
         justify-content: center;
-        padding: 0 25px;
+        padding: 5px 25px;
     }
 
     .header-row .ant-space-item {
