@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Skeleton, Space, Typography } from 'antd';
+import { Card, Skeleton, Space, Typography, Tag } from 'antd';
 import { EyeOutlined, ForkOutlined, GithubFilled, StarOutlined } from '@ant-design/icons';
 
 import ReactMarkdown from 'react-markdown';
@@ -53,16 +53,15 @@ export class GithubProjectDetail extends React.Component {
                     },
                     loadResult: true
                 });
-                if(!this.state.isReadmeLoaded || !this.state.readmeResult)
-                {
+                if (!this.state.isReadmeLoaded || !this.state.readmeResult) {
                     this.getReadmeDetails(githubUrl);
                 }
             });
     }
 
     getReadmeDetails(githubUrl) {
-        const readmeUrl = githubUrl.replace(GITHUB_DOMAIN_BASE, GITHUB_README_DOMAIN) 
-        + "/" + this.state.details.default_branch + "/" + this.props.project.readmePath;
+        const readmeUrl = githubUrl.replace(GITHUB_DOMAIN_BASE, GITHUB_README_DOMAIN)
+            + "/" + this.state.details.default_branch + "/" + this.props.project.readmePath;
         fetch(readmeUrl).then(response => response.text(),
             response => {
                 this.setState({
@@ -88,28 +87,28 @@ export class GithubProjectDetail extends React.Component {
                 }
             ];
 
-            this.setState({activeTab: 'description'});
+            this.setState({ activeTab: 'description' });
         });
     }
 
-    renderDescription(project)
-    {
+    renderDescription(project) {
         return (
             <Space direction='vertical' size='middle'>
+                <div>
+                    {project.tags.map((tag, index) => <Tag color='blue'>{tag}</Tag>)}
+                </div>
                 <Typography.Text>{project.description}</Typography.Text>
             </Space>
         )
     }
 
-    renderReadme(){
+    renderReadme() {
         return <ReactMarkdown children={this.readmeContent} />
     }
 
     renderContent(project) {
-        if(this.state.readmeResult)
-        {
-            if(this.state.activeTab == 'readme')
-            {
+        if (this.state.readmeResult) {
+            if (this.state.activeTab == 'readme') {
                 return this.renderReadme();
             }
         }
@@ -140,8 +139,8 @@ export class GithubProjectDetail extends React.Component {
 
         return (
             <>
-                <Card title={project.title} actions={actions} className="project-card" 
-                tabList={this.tabList} activeTabKey={this.state.activeTab} onTabChange={key => this.setState({activeTab: key})}>
+                <Card title={project.title} actions={actions} className="project-card"
+                    tabList={this.tabList} activeTabKey={this.state.activeTab} onTabChange={key => this.setState({ activeTab: key })}>
                     {this.renderContent(project)}
                 </Card>
             </>);

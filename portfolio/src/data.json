@@ -93,21 +93,40 @@
                     "title": "paradoxOS - Unix unlike operating system.",
                     "description": "This is an hobbyist Operating System Project currently in very early stage. The design has not been finalized yet, hence no formal design docs is available.",
                     "link": "https://github.com/ParadoxZero/paradoxOS",
-                    "readmePath": "README.md"
+                    "readmePath": "README.md",
+                    "tags": ["c", "operating-system", "system-software", "os-from-scratch"]
                 },
                 {
                     "type": "github",
                     "title": "EnhancedFreeRTOS",
                     "link":"https://github.com/FreeRTOS-AdaptiveScheduling/EnhancedFreeRTOS",
                     "description":"This is a modified version of FreeRTOS kernel with an enhanced scheduler. An adaptive scheduler for the FreeRTOS based on Ant Colony Optimisation.",
-                    "readmePath": "README.md"
+                    "readmePath": "README.md",
+                    "tags": ["c", "operating-system", "system-software"]
+                },
+                {
+                    "type": "github",
+                    "title": "sfml-snake",
+                    "description": "A classic snake game made in C++ using sfml library. This project uses the low level graphics library sfml to generate the game visual and pure C++ for the game controller logic.",
+                    "link": "https://github.com/ParadoxZero/sfml-snake",
+                    "readmePath": "README.md",
+                    "tags": ["c++", "game", "sfml", "low-level"]
                 },
                 {
                     "type": "github",
                     "title": "stmp",
                     "description": "Simple macro processor. It will expand MACROs defined in source code. A macro is expandable pre-compilation text shortcuts that can be used to dynamically generate source code.",
                     "link": "https://github.com/ParadoxZero/stmp",
-                    "readmePath": "README.md"
+                    "readmePath": "README.md",
+                    "tags":["c", "pre-compiler", "macro-processor", "system-software"]
+                },
+                {
+                    "type": "github",
+                    "title": "Easy Portfolio",
+                    "description": "This website. This is totally data driven via JSON. Anyone can clone, fork, update the data entried and have their own personal homepage/ portfolio site up and ready in few minutes.",
+                    "link": "https://github.com/ParadoxZero/ParadoxZero.github.io",
+                    "readmePath": "README.md",
+                    "tags": ["javascript", "react", "web-application", "single-page-app"]
                 }
             ]
         }
