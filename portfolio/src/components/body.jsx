@@ -51,7 +51,6 @@ export class Body extends ReactiveComponent {
     }
 
     getUrlPath(props) {
-        console.log(window.location);
         if (window.location.pathname === "/" && window.location.hash.length === 0) { 
             // No path in url -> go to first section
             const new_path = props.sections[0].header;

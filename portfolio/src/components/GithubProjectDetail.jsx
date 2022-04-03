@@ -95,7 +95,7 @@ export class GithubProjectDetail extends React.Component {
         return (
             <Space direction='vertical' size='middle'>
                 <div>
-                    {project.tags.map((tag, index) => <Tag color='blue'>{tag}</Tag>)}
+                    {project.tags.map((tag, index) => <Tag color='blue' key={index}>{tag}</Tag>)}
                 </div>
                 <Typography.Text>{project.description}</Typography.Text>
             </Space>
@@ -108,7 +108,7 @@ export class GithubProjectDetail extends React.Component {
 
     renderContent(project) {
         if (this.state.readmeResult) {
-            if (this.state.activeTab == 'readme') {
+            if (this.state.activeTab === 'readme') {
                 return this.renderReadme();
             }
         }

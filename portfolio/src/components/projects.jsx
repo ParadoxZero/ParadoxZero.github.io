@@ -1,4 +1,4 @@
-import { Card, Skeleton, Space, Tag, Typography } from "antd";
+import { Card, Space, Tag, Typography } from "antd";
 import React from "react";
 import { GithubProjectDetail } from "./GithubProjectDetail";
 import { ReactiveComponent } from "./ReactiveComponent";
@@ -7,12 +7,12 @@ export class Projects extends ReactiveComponent {
 
     renderPublication(project, index) {
         return (
-            <Card className="project-card" title={project.title}>
+            <Card className="project-card" title={project.title} key={index}>
                 <Space direction="vertical">
                 <div><Typography.Text strong>DOI -</Typography.Text> <Typography.Text>{project.DOI}</Typography.Text></div>
                 <div><Typography.Text strong>Conference - </Typography.Text> <Typography.Text>{project.conference}</Typography.Text></div>
                 <div>
-                    {project.tags.map((tag, index) => <Tag color='blue'>{tag}</Tag>)}
+                    {project.tags.map((tag, index) => <Tag color='blue' key={index}>{tag}</Tag>)}
                 </div>
                 <div>
                     <Typography.Title level={5}>Abstract</Typography.Title>
@@ -32,6 +32,7 @@ export class Projects extends ReactiveComponent {
         switch (project.type) {
             case "github": return <GithubProjectDetail project={project} key={index} />;
             case "publication": return this.renderPublication(project, index);
+            default: return <></>;
         }
     }
 
