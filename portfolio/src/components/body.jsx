@@ -10,8 +10,6 @@ import { ReactiveComponent, ViewMode } from './ReactiveComponent';
 export class Body extends ReactiveComponent {
     state = {};
 
-    scroll_debounce_timestamp = 0;
-
     constructor(props) {
         super(props);
         this.state.current = props.sections[0];
