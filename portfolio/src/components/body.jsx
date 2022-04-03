@@ -14,7 +14,7 @@ export class Body extends ReactiveComponent {
     constructor(props) {
         super(props);
 
-        const current_path = this.initUrlPath(props);
+        const current_path = this.getUrlPath(props);
         this.fetchSectionFromRoute(current_path);
         
     }
@@ -47,17 +47,19 @@ export class Body extends ReactiveComponent {
 
     setSection(section) {
         this.setState({ current: section });
-        window.location.assign(section.header);
+        window.location.assign("/#/" + section.header);
     }
 
-    initUrlPath(props) {
-        let current_path = window.location.pathname.replace("/", "");
-        if (current_path.length == 0) { 
+    getUrlPath(props) {
+        console.log(window.location);
+        if (window.location.pathname === "/" && window.location.hash.length === 0) { 
             // No path in url -> go to first section
-            current_path = props.sections[0].header;
-            window.location.assign(current_path);
+            const new_path = props.sections[0].header;
+            window.location.assign("/#/" + new_path);
+            return new_path;
         }
 
+        const current_path = window.location.hash.replace("/", "").replace("#", "");
         return current_path;
     }
 
@@ -66,7 +68,7 @@ export class Body extends ReactiveComponent {
         if (section)
             this.state.current = section;
         else
-            this.state.current = {header:'NotFound'}; // generate error section by giving invalid keyword.
+            this.state.current = {header:'NotFound'}; // generate error section by giving invalid keyword. 
     }
 
     renderContent() {
