@@ -57,9 +57,16 @@
     z-index: 100;
     background-color: rgba(241, 241, 241, 0.877);
     backdrop-filter: blur(3);
+    border-radius: 10px;
 }
 
 .mobile-menu-button {
+    border-radius: 10px;
+}
+
+.ant-dropdown-menu-title-content {
+    font-size: large;
+    padding: 10px 5px;
     border-radius: 10px;
 }
 
