@@ -6,6 +6,7 @@
 .contact-container {
     height: 200px;
     width: 200px;
+    min-width: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -45,13 +46,30 @@
     border-bottom: 0;
 }
 
+.mobile-menu {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px;
+    padding-right: 30px;
+}
+
+.mobile-menu-overlay {
+    z-index: 100;
+    background-color: rgba(241, 241, 241, 0.877);
+    backdrop-filter: blur(3);
+}
+
+.mobile-menu-button {
+    border-radius: 10px;
+}
+
 .section-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
     padding-top: 20px;
 }
-.section-card-details {
+.section-inner-container {
     width: 60vw;
 }
 
@@ -65,9 +83,6 @@
     border-color:  #167ddd18;
 }
 
-.experience {
-    width: 60%;
-}
 .ant-timeline-item-tail {
     border-color:  #167ddd18;
 }
@@ -90,4 +105,26 @@
     flex-direction: column;
     justify-content: flex-end;
     flex-grow: 2;
+}
+
+/* 930 because that's where first bad overflow */
+@media only screen and (max-width: 930px) { 
+    .contact-container {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .section-inner-container {
+        width: 95vw;
+    }
+
+    .header-row {
+        justify-content: center;
+        padding: 0 25px;
+    }
+
+    .header-row .ant-space-item {
+        align-self: center;
+        text-align: justify;
+    }
 }

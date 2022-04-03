@@ -1,30 +1,25 @@
-import { Menu, Card, Timeline } from 'antd';
-import {UserOutlined, ScheduleOutlined, BankOutlined, BookOutlined, BulbOutlined, CodeOutlined} from '@ant-design/icons'
+import { Menu, Card, Timeline, Dropdown, Button } from 'antd';
+import { UserOutlined, ScheduleOutlined, BankOutlined, BookOutlined, BulbOutlined, CodeOutlined, MenuOutlined } from '@ant-design/icons'
 import React from 'react';
 import { Education } from './education';
-import {Overview} from './overview';
+import { Overview } from './overview';
 import { ErrorNotFound } from './ErrorNotFound';
 import { Experience } from './experience';
+import { ReactiveComponent, ViewMode } from './ReactiveComponent';
 
-export class Body extends React.Component
-{
-    state = {
-        current: {}
-    };
+export class Body extends ReactiveComponent {
+    state = {};
 
     scroll_debounce_timestamp = 0;
 
-    constructor(props)
-    {
+    constructor(props) {
         super(props);
         this.state.current = props.sections[0];
     }
 
     findSection = key => {
-        for ( let section of this.props.sections)
-        {
-            if(section.header === key)
-            {
+        for (let section of this.props.sections) {
+            if (section.header === key) {
                 return section;
             }
         }
@@ -40,39 +35,61 @@ export class Body extends React.Component
     }
 
     mapKeyToIcon = {
-        'UserOutlined': <UserOutlined style={this.IconfontStyle}/>,
-        'ScheduleOutlined': <ScheduleOutlined style={this.IconfontStyle}/>,
-        'BankOutlined': <BankOutlined style={this.IconfontStyle}/>,
-        'BookOutlined':<BookOutlined style={this.IconfontStyle}/>,
-        'BulbOutlined':<BulbOutlined style={this.IconfontStyle}/>,
-        'CodeOutlined': <CodeOutlined style={this.IconfontStyle}/>
+        'UserOutlined': <UserOutlined style={this.IconfontStyle} />,
+        'ScheduleOutlined': <ScheduleOutlined style={this.IconfontStyle} />,
+        'BankOutlined': <BankOutlined style={this.IconfontStyle} />,
+        'BookOutlined': <BookOutlined style={this.IconfontStyle} />,
+        'BulbOutlined': <BulbOutlined style={this.IconfontStyle} />,
+        'CodeOutlined': <CodeOutlined style={this.IconfontStyle} />
     };
 
-    renderContent()
-    {
-        switch(this.state.current.header)
-        {
-            case 'Overview': return <Overview paragraphs = {this.state.current.content} />
-            case 'Experience': return <Experience experience= {this.state.current.content} />
-            case 'Education': return <Education content = {this.state.current.content} />
+    renderContent() {
+        switch (this.state.current.header) {
+            case 'Overview': return <Overview paragraphs={this.state.current.content} />
+            case 'Experience': return <Experience experience={this.state.current.content} />
+            case 'Education': return <Education content={this.state.current.content} />
             default: return <ErrorNotFound />
         }
     }
 
-    render()
-    {
+    render() {
         const sections = this.props.sections;
         return (
             <>
-            <Menu onClick={this.handleClick} selectedKeys={this.state.current.header} mode='horizontal' className='nav-bar-container'>
-                {sections.map((section, index)=>
-                    <Menu.Item key={section.header} icon={this.mapKeyToIcon[section.iconKey]}>{section.header}</Menu.Item>
-                )}
-            </Menu>
-            <div className='section-container' id='section-content'>
-                {this.renderContent()}
-            </div>
+                {this.renderMenu(sections)}
+                <div className='section-container' id='section-content'>
+                    {this.renderContent()}
+                </div>
             </>
+        )
+    }
+
+    renderMenu(sections) {
+        switch (this.state.responsiveStage){
+            case ViewMode.Desktop:
+            case ViewMode.Tablet: return this.renderNavBar(sections);
+            case ViewMode.Mobile: return this.renderMobileMenu(sections);
+        }
+    }
+
+    renderNavBar(sections) {
+        return(
+        <Menu onClick={this.handleClick} selectedKeys={this.state.current.header} mode='horizontal' className='nav-bar-container'>
+            {sections.map((section, index) => <Menu.Item key={section.header} icon={this.mapKeyToIcon[section.iconKey]}>{section.header}</Menu.Item>
+            )}
+        </Menu>
+        );
+    }
+
+    renderMobileMenu(sections) {
+        return (
+            <div className='mobile-menu'>
+                <Dropdown overlay={this.renderNavBar(sections)} overlayClassName="mobile-menu-overlay">
+                    <Button type='primary' icon={<MenuOutlined />} className='mobile-menu-button' ghost size='large'>
+                        Menu 
+                    </Button>
+                </Dropdown>
+            </div>
         )
     }
 }
