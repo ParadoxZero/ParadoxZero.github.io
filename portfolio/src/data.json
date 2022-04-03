@@ -79,9 +79,35 @@
             "iconKey": "BulbOutlined",
             "content": [
                 {
-                    "title": "",
-                    "description":"",
-                    "link": ""
+                    "type": "publication",
+                    "title": "An Intelligent Adaptive Scheduler for Operating Systems",
+                    "tags": ["publication", "operating-system", "os-scheduler"],
+                    "description":"Created an adaptive scheduling algorithm based on Ant Colony Optimisation for operating system process scheduling. It was implemented on FreeRTOS and empirically measured the performance.",
+                    "DOI":"10.1109/ICCONS.2018.8662927",
+                    "conference": "2018 Second International Conference on Intelligent Computing and Control Systems (ICICCS)",
+                    "abstract": "Traditional scheduling algorithms are insensitive to system changes like load which can reduce the efficiency. In this paper, we present an intelligent Adaptive Scheduling Algorithm for operating systems using Ant Colony Optimization to tackle this issue. Ant colony optimization is an evolutionary algorithm inspired from real-world ant colonies. The scheduler is implemented on FreeRTOS, a popular realtime operating system. Also, the paper shows the empirical study of the implementations performance.",
+                    "link":"https://ieeexplore.ieee.org/document/8662927"
+                },
+                {
+                    "type": "github",
+                    "title": "paradoxOS - Unix unlike operating system.",
+                    "description": "This is an hobbyist Operating System Project currently in very early stage. The design has not been finalized yet, hence no formal design docs is available.",
+                    "link": "https://github.com/ParadoxZero/paradoxOS",
+                    "readmePath": "README.md"
+                },
+                {
+                    "type": "github",
+                    "title": "EnhancedFreeRTOS",
+                    "link":"https://github.com/FreeRTOS-AdaptiveScheduling/EnhancedFreeRTOS",
+                    "description":"This is a modified version of FreeRTOS kernel with an enhanced scheduler. An adaptive scheduler for the FreeRTOS based on Ant Colony Optimisation.",
+                    "readmePath": "README.md"
+                },
+                {
+                    "type": "github",
+                    "title": "stmp",
+                    "description": "Simple macro processor. It will expand MACROs defined in source code. A macro is expandable pre-compilation text shortcuts that can be used to dynamically generate source code.",
+                    "link": "https://github.com/ParadoxZero/stmp",
+                    "readmePath": "README.md"
                 }
             ]
         }

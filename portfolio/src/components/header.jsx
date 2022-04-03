@@ -1,8 +1,9 @@
-import { GithubFilled, InstagramFilled, MailOutlined, LinkedinFilled, PhoneOutlined, PhoneFilled, MailFilled } from "@ant-design/icons";
-import { Card, Image, Space } from "antd";
+import { GithubFilled, InstagramFilled, LinkedinFilled, PhoneFilled, MailFilled } from "@ant-design/icons";
+import { Image, Space } from "antd";
 import React from "react";
 
 import './components.css'
+import { ErrorNotFound } from "./ErrorNotFound";
 import { ReactiveComponent, ViewMode } from "./ReactiveComponent";
 
 export class Header extends ReactiveComponent {
@@ -11,10 +12,8 @@ export class Header extends ReactiveComponent {
             case ViewMode.Desktop: return this.renderDesktop();
             case ViewMode.Tablet:
             case ViewMode.Mobile: return this.renderSmallScreen();
+            default: return <ErrorNotFound/>
         }
-        return (
-            this.renderDesktop()
-        )
     }
 
     renderSmallScreen() {

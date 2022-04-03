@@ -1,4 +1,4 @@
-import { Menu, Card, Timeline, Dropdown, Button } from 'antd';
+import { Menu, Dropdown, Button } from 'antd';
 import { UserOutlined, ScheduleOutlined, BankOutlined, BookOutlined, BulbOutlined, CodeOutlined, MenuOutlined } from '@ant-design/icons'
 import React from 'react';
 import { Education } from './education';
@@ -6,6 +6,7 @@ import { Overview } from './overview';
 import { ErrorNotFound } from './ErrorNotFound';
 import { Experience } from './experience';
 import { ReactiveComponent, ViewMode } from './ReactiveComponent';
+import { Projects } from './projects';
 
 export class Body extends ReactiveComponent {
     state = {};
@@ -46,6 +47,7 @@ export class Body extends ReactiveComponent {
             case 'Overview': return <Overview paragraphs={this.state.current.content} />
             case 'Experience': return <Experience experience={this.state.current.content} />
             case 'Education': return <Education content={this.state.current.content} />
+            case 'Projects': return <Projects projects = {this.state.current.content} />
             default: return <ErrorNotFound />
         }
     }
@@ -67,6 +69,7 @@ export class Body extends ReactiveComponent {
             case ViewMode.Desktop:
             case ViewMode.Tablet: return this.renderNavBar(sections);
             case ViewMode.Mobile: return this.renderMobileMenu(sections);
+            default: return <ErrorNotFound />;
         }
     }
 

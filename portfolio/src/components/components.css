@@ -102,6 +102,15 @@
     font-size: 24px;
 }
 
+.project-card {
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.562);
+}
+
+.project-card .ant-card-actions {
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.562);
+}
 #footer {
     bottom: 0;
     position: relative;

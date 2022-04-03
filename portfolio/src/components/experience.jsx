@@ -1,6 +1,5 @@
 import React from 'react';
 import {Timeline, Card} from 'antd';
-import { render } from 'react-dom';
 import { ReactiveComponent, ViewMode } from './ReactiveComponent';
 
 export class Experience extends ReactiveComponent{
