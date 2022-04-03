@@ -13,7 +13,10 @@ export class Body extends ReactiveComponent {
 
     constructor(props) {
         super(props);
-        this.state.current = props.sections[0];
+
+        const current_path = this.initUrlPath(props);
+        this.fetchSectionFromRoute(current_path);
+        
     }
 
     findSection = key => {
@@ -26,7 +29,7 @@ export class Body extends ReactiveComponent {
 
     handleClick = e => {
         let section = this.findSection(e.key);
-        this.setState({ current: section });
+        this.setSection(section);
     };
 
     IconfontStyle = {
@@ -41,6 +44,30 @@ export class Body extends ReactiveComponent {
         'BulbOutlined': <BulbOutlined style={this.IconfontStyle} />,
         'CodeOutlined': <CodeOutlined style={this.IconfontStyle} />
     };
+
+    setSection(section) {
+        this.setState({ current: section });
+        window.location.assign(section.header);
+    }
+
+    initUrlPath(props) {
+        let current_path = window.location.pathname.replace("/", "");
+        if (current_path.length == 0) { 
+            // No path in url -> go to first section
+            current_path = props.sections[0].header;
+            window.location.assign(current_path);
+        }
+
+        return current_path;
+    }
+
+    fetchSectionFromRoute(current_path) {
+        const section = this.findSection(current_path);
+        if (section)
+            this.state.current = section;
+        else
+            this.state.current = {header:'NotFound'}; // generate error section by giving invalid keyword.
+    }
 
     renderContent() {
         switch (this.state.current.header) {
