@@ -2,6 +2,8 @@
 
 Easy to re-use portfolio, personal website that's completely data driven.
 
+Example, this repository hosted via github pages - [sidhin.in](sidhin.in)
+
 ## How to use
 
 1. Fork the repository
