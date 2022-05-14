@@ -2,7 +2,7 @@
 
 Easy to re-use portfolio, personal website that's completely data driven.
 
-Example, this repository hosted via github pages - [sidhin.in](sidhin.in)
+Example, this repository hosted via github pages - [sidhin.in](https://sidhin.in)
 
 ## How to use
 
