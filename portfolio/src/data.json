@@ -22,8 +22,10 @@
                     "title": "Software Engineer 2 | Microsoft Edge - PDF",
                     "timeline": "Jan 2020 - Present",
                     "points": [
-                        "Took up ownership of Digital SIgnature",
-                        "Unblocked unseasoned pdf viewer post deptication of pepper APIs in Chromium"
+                        "Implemented Digital Signature Validations in PDFs for New PDF Viewer",
+                        "Enabled support for XFA (XML Forms Architecture) in PDF Viewer",
+                        "Accessibility champ for the team - review and help others fix accessibility issues",
+                        "Worked on building the unseasoned (pepper less) verison pdf viewer integration post deptication of pepper APIs in Chromium",
                     ]
                 },
                 {
