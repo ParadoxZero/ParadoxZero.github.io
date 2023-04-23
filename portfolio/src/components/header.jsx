@@ -12,7 +12,7 @@ export class Header extends ReactiveComponent {
             case ViewMode.Desktop: return this.renderDesktop();
             case ViewMode.Tablet:
             case ViewMode.Mobile: return this.renderSmallScreen();
-            default: return <ErrorNotFound/>
+            default: return <ErrorNotFound />
         }
     }
 
@@ -63,14 +63,19 @@ export class Header extends ReactiveComponent {
     renderContactMe() {
         return (
             <Space direction="vertical" size='middle'>
-                <Space direction="horizontal">
-                    <MailFilled />
-                    <span>{this.props.socialUrls.email}</span>
-                </Space>
-                <Space direction="horizontal">
-                    <PhoneFilled rotate={100} />
-                    <span>{this.props.socialUrls.phone}</span>
-                </Space>
+                {this.props.socialUrls.email &&
+
+                    <Space direction="horizontal">
+                        <MailFilled />
+                        <span>{this.props.socialUrls.email}</span>
+                    </Space>
+                }
+                {this.props.socialUrls.phone &&
+                    <Space direction="horizontal">
+                        <PhoneFilled rotate={100} />
+                        <span>{this.props.socialUrls.phone}</span>
+                    </Space>
+                }
             </Space>
         );
     }
