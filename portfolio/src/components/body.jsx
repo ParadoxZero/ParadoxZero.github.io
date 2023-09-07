@@ -1,5 +1,5 @@
 import { Menu, Dropdown, Button } from 'antd';
-import { UserOutlined, ScheduleOutlined, BankOutlined, BookOutlined, BulbOutlined, CodeOutlined, MenuOutlined } from '@ant-design/icons'
+import { UserOutlined, ScheduleOutlined, BankOutlined, BookOutlined, BulbOutlined, CodeOutlined, MenuOutlined, MessageOutlined } from '@ant-design/icons'
 import React from 'react';
 import { Education } from './education';
 import { Overview } from './overview';
@@ -106,6 +106,10 @@ export class Body extends ReactiveComponent {
         <Menu onClick={this.handleClick} selectedKeys={this.state.current.header} mode='horizontal' className='nav-bar-container'>
             {sections.map((section, index) => <Menu.Item key={section.header} icon={this.mapKeyToIcon[section.iconKey]}>{section.header}</Menu.Item>
             )}
+            <Menu.Item
+                key="blog" icon={<MessageOutlined />} label="blog">
+                    <a href='https://sidhin.in/blog'>Blog</a>
+            </Menu.Item>
         </Menu>
         );
     }
