@@ -102,6 +102,10 @@ export class Body extends ReactiveComponent {
     }
 
     renderNavBar(sections) {
+        if (!this.state.current.header) {
+            const current_path = this.getUrlPath(this.props);
+            this.fetchSectionFromRoute(current_path);
+        }
         return(
         <Menu onClick={this.handleClick} selectedKeys={this.state.current.header} mode='horizontal' className='nav-bar-container'>
             {sections.map((section, index) => <Menu.Item key={section.header} icon={this.mapKeyToIcon[section.iconKey]}>{section.header}</Menu.Item>
