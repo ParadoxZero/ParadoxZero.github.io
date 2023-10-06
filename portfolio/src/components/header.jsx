@@ -1,4 +1,4 @@
-import { GithubFilled, InstagramFilled, LinkedinFilled, PhoneFilled, MailFilled } from "@ant-design/icons";
+import { GithubFilled, InstagramFilled, LinkedinFilled, DownloadOutlined, MailFilled } from "@ant-design/icons";
 import { Image, Space } from "antd";
 import React from "react";
 
@@ -70,10 +70,10 @@ export class Header extends ReactiveComponent {
                         <span>{this.props.socialUrls.email}</span>
                     </Space>
                 }
-                {this.props.socialUrls.phone &&
+                {
                     <Space direction="horizontal">
-                        <PhoneFilled rotate={100} />
-                        <span>{this.props.socialUrls.phone}</span>
+                        <DownloadOutlined />
+                        <span><a href="https://drive.google.com/file/d/1h7wfq7RAuaFvUgSfg59_HZkOJuRb6ibG/view?usp=sharing">Download Resume</a></span>
                     </Space>
                 }
             </Space>
