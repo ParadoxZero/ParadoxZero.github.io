@@ -4,7 +4,7 @@ import {Body} from './components/body'
 
 import React from 'react';
 
-import {profile, name, picUrl, socialUrls, sections, footer} from './data.json';
+import { default as data} from './data.json';
 import { Footer } from './components/footer';
 
 function App () 
@@ -12,9 +12,9 @@ function App ()
   return (
     <>
         <div id='sticky-bg'></div>
-        <Header profile={profile} name={name} picUrl={picUrl} socialUrls={socialUrls}/>
-        <Body sections={sections}/>
-        <Footer content={footer}/>
+        <Header profile={data.profile} name={data.name} picUrl={data.picUrl} socialUrls={data.socialUrls}/>
+        <Body sections={data.sections}/>
+        <Footer content={data.footer}/>
     </>
   );
 }

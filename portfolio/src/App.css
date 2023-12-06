@@ -13,7 +13,7 @@
     width: 100%;
     position: fixed;
     top:0;
-    background-image: url("/bp-pattern2.jpg");
+    background-image: url("../public/bp-pattern2.jpg");
     background-repeat: repeat;
     z-index: -999;
 }
