@@ -10,6 +10,9 @@ export function Footer(props)
             <span>
             Background vector created by rawpixel.com
             </span>
+            <span>
+                Checkout the awesome ecom <a href="https://thelehar.com">store. The Lehar.</a>
+            </span>
         </div>
     );
 }
