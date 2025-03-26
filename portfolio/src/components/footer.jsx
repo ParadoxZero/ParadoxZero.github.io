@@ -1,18 +1,17 @@
+import { Flex, Typography } from "antd";
 import React from "react";
 
-export function Footer(props) 
-{
+const { Title, Paragraph, Text, Link } = Typography;
+
+export function Footer(props) {
     return (
-        <div id="footer">
-            <span>
+        <Flex vertical gap={4} id="footer">
+            <Text>
                 {props.content}
-            </span>
-            <span>
-            Background vector created by rawpixel.com
-            </span>
-            <span>
-                Checkout the awesome ecom <a href="https://thelehar.com">store. The Lehar.</a>
-            </span>
-        </div>
+            </Text>
+            <Text>
+                Checkout the awesome ecom store. <Link href="https://thelehar.com">The Lehar.</Link>
+            </Text>
+        </Flex>
     );
 }

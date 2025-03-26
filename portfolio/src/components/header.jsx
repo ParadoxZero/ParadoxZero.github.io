@@ -1,10 +1,12 @@
-import { GithubFilled, InstagramFilled, LinkedinFilled, DownloadOutlined, MailFilled } from "@ant-design/icons";
-import { Image, Space } from "antd";
+import { GithubFilled, InstagramFilled, LinkedinFilled, DownloadOutlined, MailFilled, MailOutlined } from "@ant-design/icons";
+import { Image, Space, Flex, Typography } from "antd";
 import React from "react";
 
 import './components.css'
 import { ErrorNotFound } from "./ErrorNotFound";
 import { ReactiveComponent, ViewMode } from "./ReactiveComponent";
+
+const { Title, Paragraph, Text, Link } = Typography;
 
 export class Header extends ReactiveComponent {
     render() {
@@ -24,8 +26,8 @@ export class Header extends ReactiveComponent {
                 </div>
                 <div className="header-row">
                     <Space direction="vertical">
-                        <h1>{this.props.name}</h1>
-                        <span>{this.props.profile}</span>
+                        <Title level={1}>{this.props.name}</Title>
+                        <Paragraph>{this.props.profile}</Paragraph>
                         {this.renderSocials()}
                         {this.renderContactMe()}
                     </Space>
@@ -41,8 +43,8 @@ export class Header extends ReactiveComponent {
                 {this.renderDisplayPIc()}
                 <div className="name-container">
                     <Space direction="vertical">
-                        <h1>{this.props.name}</h1>
-                        <span>{this.props.profile}</span>
+                        <Title level={1}>{this.props.name}</Title>
+                        <Paragraph>{this.props.profile}</Paragraph>
                         {this.renderSocials()}
                     </Space>
                 </div>
@@ -61,30 +63,36 @@ export class Header extends ReactiveComponent {
     }
 
     renderContactMe() {
-        return (
-            <Space direction="vertical" size='middle'>
-                {this.props.socialUrls.email &&
 
-                    <Space direction="horizontal">
-                        <MailFilled />
-                        <span>{this.props.socialUrls.email}</span>
-                    </Space>
+        const email = "mailto:" + this.props.socialUrls.email;
+        return (
+            <Flex vertical justify="space-between" gap={15} align="center" size='middle'>
+                {this.props.socialUrls.email &&
+                    <Link href={email}>
+                        <Flex gap={10} justify="space-between" align="center">
+                            <MailOutlined style={{ fontSize: 20 }} label={this.props.socialUrls.email} />
+                            <span>{this.props.socialUrls.email}</span>
+                        </Flex>
+                    </Link>
                 }
                 {
-                    <Space direction="horizontal">
-                        <DownloadOutlined />
-                        <span><a href={this.props.socialUrls.resume}>Download Resume</a></span>
-                    </Space>
+                    <Link href={this.props.socialUrls.resume}>
+                        <Flex gap={10} justify="space-between" align="center" >
+                            <DownloadOutlined style={{ fontSize: 20 }} />
+                            <span>Download Resume</span>
+                        </Flex>
+                    </Link>
+
                 }
-            </Space>
+            </Flex>
         );
     }
 
     renderSocials() {
         return <Space direction="horizontal" size="large" className="social-icons">
-            <a href={this.props.socialUrls.github}><GithubFilled /></a>
-            <a href={this.props.socialUrls.linkedin}><LinkedinFilled /></a>
-            <a href={this.props.socialUrls.instagram}><InstagramFilled /></a>
+            <Link href={this.props.socialUrls.github}><GithubFilled /></Link>
+            <Link href={this.props.socialUrls.linkedin}><LinkedinFilled /></Link>
+            <Link href={this.props.socialUrls.instagram}><InstagramFilled /></Link>
         </Space>;
     }
 }

@@ -1,16 +1,17 @@
 {
     "name": "Sidhin S Thomas",
-    "profile": "C++ developer, system software enthusiast. In search of novel problems to solve. Browser developer working on Windows Edge. Main tech stack is C++, , React, Python. Work with Python on automation and scripting. Have experience developing enterprise solutions using ASP dot net core and data stack like Azure Data Factory and Azure Data Bricks.",
-    "picUrl": "./profile-pic-small.JPG",
+    "profile": "C++ developer, system software enthusiast. In search of novel problems to solve. Browser developer working on Microsoft Edge. Main tech stack is C++, , React, Python. Work with Python on automation and scripting. Have experience developing enterprise solutions using ASP dot net core.",
+    "picUrl": "./profile-pic.jpg",
     "sections": [
         {
             "header": "Overview",
             "content": [
-                "Engineer by nature. I extract a great deal of joy from being able to build different things. programming is my passion.",
-                "I was in fifth grade when I first “hacked” Age of empires. That’s when I started seeing computers as more than a game console. In eight grade, from an example VB.NET program in my textbook (a program to add 2 numbers), I learned the basics of programming. I was too young and didn’t have internet for tutorial, but still with the Visual studio help, Created lot’s of prank apps. That’s around when I fell in love with programing. In 11th grade I took up Computer Science, and finished the coursework about C++ (including stuffs from 12th grade ) in 2–3 months, that’s how much I loved it.",
-                "For me programing is not just about developing a software, it’s about solving a problem or a challenge. It’s a hobby. First remarkable thing I wrote up was a gravity simulator using BGI graphics of TurboC++. You could throw balls here and there, it will always falls according to the projectile motion. That was around in middle of 11th grade. I loved it.",
-                "And now, after the years I have created small games, worked on Operating Systems, OS shell, Built OS APIs, worked on Chromium, and on PDF engines so far.",
-                "Life is good and interesting."
+                "Problem solver by nature. I extract a great deal of joy from being able to build different things, rogramming is both my passion and a hobby.",
+                "I started my journey in fifth grade when I first “hacked” Age of empires. That’s when I started seeing computers as more than a game console. In eight grade, from an example VB.NET program in my textbook, I learned the \"what\" of programming. With the Visual studio's help section, created lot’s of simple prank apps. That’s when I decided this is what I want to do in life.",
+                "First remarkable thing I wrote up was a gravity simulator using BGI graphics and of TurboC++. You could throw balls here and there, it will always falls according to the gravity laws, animated by rendering each frame using the BGI API. That was around in middle of 11th grade.",
+                "And now, after the years I have created small games, worked on Operating Systems, OS shell, Built OS APIs, worked on Chromium, PDF engines, PDF SDKs, Application SDKs, Win32, Com, WinRT and bunch of other interesting stuff so far.",
+                "Apart from the technical stuff, I am a huge travel enthusiast. I love to travel and explore new places, eat new food. I love books. Have a huge collection of it. Mostly informationls like \"Immune System\" by Philipp Dettmer or fictions like the Farseer saga by Robin Hobb.",
+                "Life is good and interesting, always on a lookout for the next challenge!"
             ],
             "iconKey": "UserOutlined"
         },
@@ -19,42 +20,47 @@
             "iconKey": "CodeOutlined",
             "content": [
                 {
-                    "title": "Software Engineer 2 | Microsoft Edge - PDF",
-                    "timeline": "Jan 2020 - Present",
+                    "title": "Software Engineer 2 | Microsoft WebVIew2",
+                    "timeline": "Dec 2024 - Present",
                     "points": [
-                        "Implemented Digital Signature Validations in PDFs for New PDF Viewer",
-                        "Enabled support for XFA (XML Forms Architecture) in PDF Viewer",
-                        "Accessibility champ for the team - review and help others fix accessibility issues",
-                        "Worked on building the unseasoned (pepper less) verison pdf viewer integration post deptication of pepper APIs in Chromium"
+                        "Microsoft Windows WebView2 is a windows control/sdk that allows developers to embed web technologies (HTML, CSS, and JavaScript) in native applications. It is based on the Microsoft Edge (Chromium) platform.",
+                        "As part of the team, I own bunch of core APIs developers use to integrate WebView2 in their applications.",
+                        "Major tech stacks are C++, C#, Win32, Windows SDK, Chromium, WebView2 SDK."
+                    ]
+                },
+                {
+                    "title": "Software Engineer 2 | Microsoft Edge - PDF",
+                    "timeline": "Jan 2022 - Dec 2024",
+                    "points": [
+                        "Microsoft Edge PDF Viewer is a feature-rich PDF reader integrated into the Edge browser, enabling users to view, annotate, and interact with PDF documents seamlessly.",
+                        "Built features like the support for - Digital Signature Validations in PDFs, XFA (XML Forms Architecture) etc.",
+                        "Served as the Accessibility Champ for the team, reviewing and assisting in fixing accessibility issues."
                     ]
                 },
                 {
                     "title": "Sofftware Engineer 2 | Microsoft Windows Team Edition",
-                    "timeline": "Nov 2019 to Jan 2020",
+                    "timeline": "Nov 2019 to Jan 2022",
                     "points": [
-                        "Owned End Session Cleanup - Component which enables Surface Hub users to walk away with confidence knowning their content/ logins are cleaned up post session",
-                        "Shiped software control to manage brightness of Surface Hub",
-                        "Shipped MMR/TAC integration for Surface Hub which allows admins to monitor and manage Surface Hubs remotely"
+                        "Microsoft Surface Hub is a digital whiteboard and collaboration device designed for teams to work together in a shared space. It runs on Windows 10 Team Edition, a specialized version of Windows 10 tailored for the Surface Hub hardware.",
+                        "My team and I built and owned the Windows 10 Team Edition. We had a custom OS Shell and application SDK.",
+                        "I got to own and build multiple critical components like the \"End Session\" and Session Management, Windowing System and parts of the secure boot implementation."
                     ]
                 },
                 {
                     "title": "Sofftware Engineer | Microsoft HR Data Insights",
                     "timeline": "Jan 2019 - Nov 2019",
                     "points": [
-                        "Owned and built up the HCM Access Management Framework",
-                        "Shipped vnext version of employee data source based on Data Lake, migrate from SQL servers",
-                        "Owned key transformations to the employee data lake via Data Bricks"
+                        "HR Data Insights team handled the BI Data Lake used accross Microsoft for People data. Built using technologies like Azure Data Factory, Azure Data Bricks, Azure Data Lake, etc.",
+                        "Other than the usual ETL, I also built the access management system for the data lake. A way for consumers to request access, grant them access etc.",
+                        "Success of the Access Management system, resulted in it being adopted by other BI teams in Microsoft."
                     ]
                 },
                 {
                     "title": "Sofftware Engineer | Microsoft Digital Crimes Unit - FAME (tool)",
                     "timeline": "Aug 2018 - Dec 2018",
                     "points": [
-                        "Built search advanced search query caching to make searches easier on users",
-                        "Enhanced report generation by eliminating data size limit (previously limited to 1000 rows)",
-                        "Built an enhanced search grid, increasing the capacity of maximum 50 results to virtually unlimited by leveraging the concept of virtual scrolling.",
-                        "Built extremely scalabale downstream integration to pull core data out of Application to BI systems",
-                        "Built a search index operation framework enables developers to implement operations over search index with just two lines of code."
+                        "Digital Crimes Unit was part of Corporate Functions Engineering. Building Line of buisness applications for Microsoft's Lawyer team.",
+                        "Worked of a tool called FAME - Forensic Analysis and Management Engine. Built using ASP.NET Core, Azure Cosmos DB, App Service, etc."
                     ]
                 }
             ]
