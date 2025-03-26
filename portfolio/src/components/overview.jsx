@@ -6,7 +6,7 @@ const { Paragraph } = Typography;
 export function Overview(props) {
     const paragraphs = props.paragraphs;
     return (
-        <Card className='section-card section-inner-container' bordered={false}>
+        <Card className='section-card section-inner-container' bordered>
             {paragraphs.map((content, index) =>
                 <Paragraph key={index}>{content}</Paragraph>
             )}

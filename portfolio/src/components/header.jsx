@@ -1,4 +1,4 @@
-import { GithubFilled, InstagramFilled, LinkedinFilled, DownloadOutlined, MailFilled, MailOutlined } from "@ant-design/icons";
+import { GithubFilled, InstagramFilled, LinkedinFilled, DownloadOutlined, MailOutlined } from "@ant-design/icons";
 import { Image, Space, Flex, Typography } from "antd";
 import React from "react";
 
@@ -6,7 +6,7 @@ import './components.css'
 import { ErrorNotFound } from "./ErrorNotFound";
 import { ReactiveComponent, ViewMode } from "./ReactiveComponent";
 
-const { Title, Paragraph, Text, Link } = Typography;
+const { Title, Paragraph, Link } = Typography;
 
 export class Header extends ReactiveComponent {
     render() {

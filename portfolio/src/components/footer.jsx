@@ -1,7 +1,7 @@
 import { Flex, Typography } from "antd";
 import React from "react";
 
-const { Title, Paragraph, Text, Link } = Typography;
+const { Text, Link } = Typography;
 
 export function Footer(props) {
     return (

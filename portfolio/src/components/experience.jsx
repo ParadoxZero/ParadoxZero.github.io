@@ -2,7 +2,7 @@ import React from 'react';
 import { Timeline, Card, Typography, Flex } from 'antd';
 import { ReactiveComponent, ViewMode } from './ReactiveComponent';
 
-const { Title, Paragraph, Text, Link } = Typography;
+const { Title, Text } = Typography;
 
 export class Experience extends ReactiveComponent {
 

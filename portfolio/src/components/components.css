@@ -80,13 +80,12 @@
 }
 
 .section-card {
-    background-color: rgba(100, 100, 100, 0.096);
     border-radius: 20px;
     text-align: left;
+    border-width: 2px;
 }
 
 .experience-card {
-    border-color:  #167ddd18;
 }
 
 .ant-timeline-item-tail {
