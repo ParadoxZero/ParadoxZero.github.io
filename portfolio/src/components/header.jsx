@@ -73,7 +73,7 @@ export class Header extends ReactiveComponent {
                 {
                     <Space direction="horizontal">
                         <DownloadOutlined />
-                        <span><a href="https://drive.google.com/file/d/1h7wfq7RAuaFvUgSfg59_HZkOJuRb6ibG/view?usp=sharing">Download Resume</a></span>
+                        <span><a href={this.props.socialUrls.resume}>Download Resume</a></span>
                     </Space>
                 }
             </Space>
